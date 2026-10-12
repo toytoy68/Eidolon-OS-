@@ -40,6 +40,18 @@ Support de différents backends (Ollama, llama.cpp et autres après qualificatio
 ## Contribution volontaire
 Duo peut proposer une participation opt-in à des tests distribués : aucune donnée personnelle ni mémoire privée envoyée par défaut ; quotas, sandbox, transparence, retrait du consentement et validation des résultats.
 
+## Projet à suivre — Artcraft / Storytold (veille du 12/10/2026)
+
+**Statut : veille technique uniquement ; pas d'intégration décidée.**
+
+- Référence présentée dans la vidéo : https://github.com/storytold
+- Nom de la suite rapporté : Artcraft ; projets cités : Photocraft, Filmcraft, PDF Craft et autres.
+- La vidéo présente une suite open source de création/édition de médias, développée avec assistance IA et contributions communautaires, visant des usages comparables à certains logiciels Adobe. Les affirmations de parité fonctionnelle, de maturité et de licences doivent être vérifiées directement dans chaque dépôt.
+- **Intérêt EidolonOS Duo / Pro** : évaluer à terme des applications créatives ouvertes pour l'App Catalog ; examiner l'intégration d'agents IA, l'ergonomie, la modularité, les API, les dépendances et la possibilité d'une exécution locale.
+- **Intérêt développement** : étudier la méthode de spécification fonctionnelle à partir de documentation publique et les revues de contributions assistées par IA ; vérifier la provenance et les droits du code et des ressources.
+- **Points de contrôle avant adoption** : URL et mainteneur du dépôt exact, licences fichier par fichier, versions publiées, stabilité, qualité des tests, dépendances réseau/cloud, sécurité, maintenabilité et compatibilité Linux.
+- **Décision attendue** : suivre les versions et réévaluer lorsque les fonctionnalités pertinentes pour EidolonOS seront suffisamment stables. Ne pas forker ni installer en production sur la seule base de la vidéo.
+
 ## Références issues des vidéos
 - Omarchy : expérience développeur et menu d'installation d'outils IA.
 - openKylin : bureau familier et assistant système ; vérifier les annonces et le code avant toute adoption.
