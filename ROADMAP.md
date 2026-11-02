@@ -1,6 +1,6 @@
 # EidolonOS — Feuille de route exploratoire
 
-Toutes les phases sont **proposées, non démarrées**.
+La feuille de route produit reste exploratoire. Une base serveur X399 fonctionne : voir le [profil et sa recette](deployment/x399/README.md). Une édition bureau et un installateur complet restent à développer.
 
 1. **Cadrage** : contrats Core/Memory, éditions Prime/Duo, exigences matérielles, sécurité et licences.
 2. **Prototype graphique en VM** : comparer KDE Plasma, UKUI et Hyprland ; réaliser les panneaux latéraux et barre IA en maquette fonctionnelle.

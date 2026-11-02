@@ -1,0 +1,18 @@
+<network>
+  <name>default</name>
+  <forward mode="nat">
+    <nat>
+      <port start="1024" end="65535" />
+    </nat>
+  </forward>
+  <bridge name="virbr0" stp="on" delay="0" />
+  <ip address="192.168.122.1" netmask="255.255.255.0">
+    <dhcp>
+      <range start="192.168.122.2" end="192.168.122.254" />
+      <host mac="52:54:00:ec:00:70" name="memory-engine" ip="192.168.122.70" />
+      <host mac="52:54:00:ec:00:71" name="memory-engine-tests" ip="192.168.122.71" />
+      <host mac="52:54:00:ec:00:72" name="memory-tests" ip="192.168.122.72" />
+      <host mac="52:54:00:ec:00:73" name="nomifactory-test" ip="192.168.122.73" />
+    </dhcp>
+  </ip>
+</network>
