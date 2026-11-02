@@ -1,0 +1,22 @@
+#!/usr/sbin/nft -f
+# Replace only Eidolon policy; preserve libvirt NAT and other owners.
+destroy table inet eidolon_filter
+table inet eidolon_filter {
+ chain input {
+  type filter hook input priority 0; policy drop;
+  iifname "lo" accept
+  ct state established,related accept
+  ct state invalid drop
+  ip protocol icmp accept
+  ip6 nexthdr ipv6-icmp accept
+  udp sport 67 udp dport 68 accept
+  ip saddr 192.168.1.0/24 tcp dport 22 accept
+  # DHCP et DNS des invites libvirt vers leur passerelle locale
+  iifname "virbr0" udp sport 68 udp dport 67 counter accept
+  iifname "virbr0" ip saddr 192.168.122.0/24 ip daddr 192.168.122.1 udp dport 53 counter accept
+  iifname "virbr0" ip saddr 192.168.122.0/24 ip daddr 192.168.122.1 tcp dport 53 counter accept
+  iifname "virbr0" ip saddr 192.168.122.0/24 tcp dport 8079 accept
+ }
+ chain forward { type filter hook forward priority 0; policy accept; }
+ chain output { type filter hook output priority 0; policy accept; }
+}
